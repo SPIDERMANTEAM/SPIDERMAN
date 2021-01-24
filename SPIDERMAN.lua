@@ -2306,10 +2306,10 @@ end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then
 Text = [[
 ≪━━━━━━𝗦𝗡━━━━━━≫
- ⌯︙ ↬𝐁𝐎𝐘𝐊𝐀 𝐓𝐄𝐀𝐌
+ ⌯︙ ↬S𝐏𝐈𝐃𝐄𝐑 𝐌𝐀𝐍 𝐓𝐄𝐀𝐌
 ≪━━━━━━𝗦𝗡━━━━━━≫
  ⌯︙ ↬[Channel SPIDERMAN](t.me/JJU6UU) 
-≪━━━━━━𝗦𝗡━━━━━━≫
+≪━━━━━━𝗦??━━━━━━≫
  ⌯︙ ↬[Information](t.me/JJU6UU)
 ≪━━━━━━𝗦𝗡━━━━━━≫
  ⌯︙ ↬[DEVELOPER](t.me/lll_lll4)
