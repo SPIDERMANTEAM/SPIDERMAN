@@ -478,14 +478,14 @@ function Reply_Status(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,data) 
 if data.first_name_ ~= false then
 local UserName = (data.username_ or "pvv_v")
-local NameUser = "❃∫ بواسطه » ["..data.first_name_.."](T.me/"..UserName..")"
-local NameUserr = "❃∫ اسم المستخدم » ["..data.first_name_.."](T.me/"..UserName..")"
+local NameUser = "✦∫ بواسطه » ["..data.first_name_.."](T.me/"..UserName..")"
+local NameUserr = "✦∫ اسم المستخدم » ["..data.first_name_.."](T.me/"..UserName..")"
 if status == "reply" then
 send(msg.chat_id_, msg.id_,NameUserr.."\n"..text)
 return false
 end
 else
-send(msg.chat_id_, msg.id_,"❃∫ الحساب محذوف يرجى استخدام الامر بصوره صحيحه")
+send(msg.chat_id_, msg.id_,"✦∫ الحساب محذوف يرجى استخدام الامر بصوره صحيحه")
 end
 end,nil)   
 end 
@@ -796,7 +796,7 @@ Chat_Type = 'GroupBot'
 end
 end
 if database:get(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == "الغاء" or text == "الغاء ✦" then   
+if text == "الغاء" or text == "الغاء ✫" then   
 send(msg.chat_id_, msg.id_," ✦∫ تم الغاء الاذاعه")
 database:del(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
@@ -847,23 +847,23 @@ end
 if DevSPIDERMAN(msg) then
 local bl = ' ✦∫ اهلا عزيزي آلمـطـور\n ✦∫ آنت آلمـطـور آلآسـآسـي للبوت\n┉  ┉  ┉  ┉  ┉  ┉  ┉  ┉ء\n ✦∫ تسـتطـيع‌‏ آلتحگم باوامر البوت\n ✦∫ من خلاال الكيبورت خاص بك\n ✦∫ قناة سورس البوت [اضغط هنا](t.me/JJU6UU)'
 local keyboard = {
-{'الاحصائيات ✦','قناه تحديثات البوت ✦'},
-{'تعطيل التواصل ✦','تفعيل التواصل ✦'},
-{'ضع اسم للبوت ✦','المطورين ✦','قائمه العام ✦'},
-{'المشتركين ✦','الكروبات ✦'},
-{'ضع كليشه ستارت ✦','حذف كليشه ستارت ✦'},
-{'اذاعه ✦','اذاعه خاص ✦'},
-{'اذاعه بالتثبيت ✦','قائمه الكتم العام ✦'},
-{'تغير رساله الاشتراك','حذف رساله الاشتراك ✦','تغير الاشتراك'},
-{'اذاعه بالتوجيه ✦','اذاعه بالتوجيه خاص ✦'},
-{'تفعيل الاشتراك الاجباري ✦','تعطيل الاشتراك الاجباري ✦'},
-{'الاشتراك الاجباري ✦','وضع قناة الاشتراك ✦'},
-{'تفعيل البوت الخدمي ✦','تعطيل البوت الخدمي ✦'},
-{'تنظيف الكروبات ✦','تنظيف المشتركين ✦'},
-{'جلب نسخه الاحتياطيه ✦'},
-{'تحديث السورس ✦','الاصدار ✦'},
-{'معلومات السيرفر ✦'},
-{'الغاء ✦'},
+{'الاحصائيات✫','قناه تحديثات البوت✫'},
+{'تعطيل التواصل ✫','تفعيل التواصل ✫'},
+{'ضع اسم للبوت ✫','المطورين ✫','قائمه العام✫'},
+{'المشتركين ✫','الكروبات ✫'},
+{'ضع كليشه ستارت ✫','حذف كليشه ستارت ✫'},
+{'اذاعه ✫','اذاعه خاص ✫'},
+{'اذاعه بالتوجيه✫','قائمه الكتم العام ✫'},
+{'تغير رساله الاشتراك','حذف رساله الاشتراك ✫ ','تغير الاشتراك'},
+{'اذاعه بالتوجيه ✫','اذاعه بالتوجيه خاص✫'},
+{'تفعيل الاشتراك الاجباري✫ ','تعطيل الاشتراك الاجباري ✫ '},
+{'الاشتراك الاجباري ✫ ','وضع قناة الاشتراك ✦'},
+{'تفعيل البوت الخدمي ✫','تعطيل البوت الخدمي ✫'},
+{'تنظيف الكروبات ✫','تنظيف المشتركين✫'},
+{'جلب نسخه الاحتياطيه ✫'},
+{'تحديث السورس ✫','الاصدار ✫'},
+{'معلومات السيرفر ✫'},
+{'الغاء ✫'},
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 else
@@ -961,7 +961,7 @@ end,nil)
 end,nil)
 end,nil)
 end 
-if text == 'تفعيل التواصل ✦' and SudoBot(msg) then  
+if text == 'تفعيل التواصل ✫' and SudoBot(msg) then  
 if database:get(bot_id..'Tuasl:Bots') then
 database:del(bot_id..'Tuasl:Bots') 
 Text = '\n ✦∫ تم تفعيل التواصل ' 
@@ -970,7 +970,7 @@ Text = '\n ✦∫ بالتاكيد تم تفعيل التواصل '
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
-if text == 'تعطيل التواصل ✦' and SudoBot(msg) then  
+if text == 'تعطيل التواصل ✫' and SudoBot(msg) then  
 if not database:get(bot_id..'Tuasl:Bots') then
 database:set(bot_id..'Tuasl:Bots',true) 
 Text = '\n ✦∫ تم تعطيل التواصل' 
@@ -979,7 +979,7 @@ Text = '\n ✦∫ بالتاكيد تم تعطيل التواصل'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
-if text == 'تفعيل البوت الخدمي ✦' and SudoBot(msg) then  
+if text == 'تفعيل البوت الخدمي ✫' and SudoBot(msg) then  
 if database:get(bot_id..'Free:Bots') then
 database:del(bot_id..'Free:Bots') 
 Text = '\n ✦∫ تم تفعيل البوت الخدمي ' 
@@ -988,7 +988,7 @@ Text = '\n ✦∫ بالتاكيد تم تفعيل البوت الخدمي '
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
-if text == 'تعطيل البوت الخدمي ✦' and SudoBot(msg) then  
+if text == 'تعطيل البوت الخدمي ✫' and SudoBot(msg) then  
 if not database:get(bot_id..'Free:Bots') then
 database:set(bot_id..'Free:Bots',true) 
 Text = '\n ✦∫ تم تعطيل البوت الخدمي' 
@@ -998,7 +998,7 @@ end
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text and database:get(bot_id..'Start:Bots') then
-if text == 'الغاء' or text == 'الغاء ✦' then   
+if text == 'الغاء' or text == 'الغاء ✫' then   
 send(msg.chat_id_, msg.id_,' ✦∫ الغاء حفظ كليشه ستارت')
 database:del(bot_id..'Start:Bots') 
 return false
@@ -1008,16 +1008,16 @@ send(msg.chat_id_, msg.id_,' ✦∫ تم حفظ كليشه ستارت')
 database:del(bot_id..'Start:Bots') 
 return false
 end
-if text == 'ضع كليشه ستارت ✦' and SudoBot(msg) then 
+if text == 'ضع كليشه ستارت ✫' and SudoBot(msg) then 
 database:set(bot_id..'Start:Bots',true) 
 send(msg.chat_id_, msg.id_,' ✦∫ ارسل لي الكليشه الان')
 return false
 end
-if text == 'حذف كليشه ستارت ✦' and SudoBot(msg) then 
+if text == 'حذف كليشه ستارت ✫' and SudoBot(msg) then 
 database:del(bot_id..'Start:Bot') 
 send(msg.chat_id_, msg.id_,' ✦∫ تم حذف كليشه ستارت')
 end
-if text == 'معلومات السيرفر ✦' and SudoBot(msg) then 
+if text == 'معلومات السيرفر ✫' and SudoBot(msg) then 
 send(msg.chat_id_, msg.id_, io.popen([[
 linux_version=`lsb_release -ds`
 memUsedPrc=`free -m | awk 'NR==2{printf "%sMB/%sMB {%.2f%}\n", $3,$2,$3*100/$2 }'`
@@ -1033,47 +1033,47 @@ echo '*———————————~*\n✺✔{ مـده تـشغيـل ال
 ]]):read('*all'))  
 end
 
-if text == 'تحديث السورس ✦' and SudoBot(msg) then 
+if text == 'تحديث السورس ✫' and SudoBot(msg) then 
 os.execute('rm -rf SPIDERMAN.lua')
 os.execute('wget https://raw.githubusercontent.com/SPIDERMANTEAM/SPIDERMAN/main/SPIDERMAN.lua')
 send(msg.chat_id_, msg.id_,' ✦∫ تم تحديث السورس \n ✦∫ لديك اخر اصدار لسورس سبايدرمان\n ✦∫ الاصدار » { 1.3v}')
 dofile('SPIDERMAN.lua')  
 end
-if text == 'الاصدار ✦' and SudoBot(msg) then 
+if text == 'الاصدار ✫' and SudoBot(msg) then 
 database:del(bot_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,' ✦∫ اصدار سورس سبايدرمان \n ✦∫ الاصدار »{ 1.3v}')
 end
-if text == 'قناه تحديثات البوت ✦' and SudoBot(msg) then 
+if text == 'قناه تحديثات البوت✫' and SudoBot(msg) then 
 database:del(bot_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,' ✦∫ [تحديثات البوت](t.me/JJU6UU) \n ✦∫ [قناه السورس](t.me/JJU6UU)')
 end
-if text == "ضع اسم للبوت ✦" and SudoBot(msg) then  
+if text == "ضع اسم للبوت ✫" and SudoBot(msg) then  
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
 send(msg.chat_id_, msg.id_," ✦∫ ارسل اليه الاسم الان ")
 return false
 end
-if text == 'الاحصائيات ✦' and SudoBot(msg) then 
+if text == 'الاحصائيات✫' and SudoBot(msg) then 
 local Groups = database:scard(bot_id..'Chek:Groups')  
 local Users = database:scard(bot_id..'User_Bot')  
-Text = ' الاحصائيات ✦ \n'..' ✦∫ عدد الكروبات » {'..Groups..'}'..'\n ✦∫  عدد المشتركين » {'..Users..'}'
+Text = ' الاحصائيات✫ \n'..' ✦∫ عدد الكروبات » {'..Groups..'}'..'\n ✦∫  عدد المشتركين » {'..Users..'}'
 send(msg.chat_id_, msg.id_,Text) 
 return false
 end
-if text == 'المشتركين ✦' and SudoBot(msg) then 
+if text == 'المشتركين ✫' and SudoBot(msg) then 
 local Groups = database:scard(bot_id..'Chek:Groups')  
 local Users = database:scard(bot_id..'User_Bot')  
 Text = '\n ✦∫ المشتركين»{`'..Users..'`}'
 send(msg.chat_id_, msg.id_,Text) 
 return false
 end
-if text == 'الكروبات ✦' and DevSPIDERMAN(msg) then 
+if text == 'الكروبات ✫' and DevSPIDERMAN(msg) then 
 local Groups = database:scard(bot_id..'Chek:Groups')  
 local Users = database:scard(bot_id..'User_Bot')  
 Text = '\n ✦∫ الكروبات»{`'..Groups..'`}'
 send(msg.chat_id_, msg.id_,Text) 
 return false
 end
-if text == ("المطورين ✦") and DevSPIDERMAN(msg) then
+if text == ("المطورين ✫") and DevSPIDERMAN(msg) then
 local list = database:smembers(bot_id..'Sudo:User')
 t = "\n ✦∫ قائمة المطورين \n≪━━━━━━𝗦𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
@@ -1089,7 +1089,7 @@ t = " ✦∫ لا يوجد مطورين"
 end
 send(msg.chat_id_, msg.id_, t)
 end
-if text == ("قائمه العام ✦") and DevSPIDERMAN(msg) then
+if text == ("قائمه العام✫") and DevSPIDERMAN(msg) then
 local list = database:smembers(bot_id..'GBan:User')
 t = "\n ✦∫ قائمه المحظورين عام \n≪━━━━━━𝗦𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
@@ -1106,7 +1106,7 @@ end
 send(msg.chat_id_, msg.id_, t)
 return false
 end
-if text == ("قائمه الكتم العام ✦") and DevSPIDERMAN(msg) then
+if text == ("قائمه الكتم العام ✫") and DevSPIDERMAN(msg) then
 local list = database:smembers(bot_id..'Gmute:User')
 t = "\n ✦∫ قائمة المكتومين عام \n≪━━━━━━𝗦𝗡━━━━━━≫\n"
 for k,v in pairs(list) do
@@ -1123,35 +1123,35 @@ end
 send(msg.chat_id_, msg.id_, t)
 return false
 end
-if text=="اذاعه خاص ✦" and msg.reply_to_message_id_ == 0 and DevSPIDERMAN(msg) then 
+if text=="اذاعه خاص ✫" and msg.reply_to_message_id_ == 0 and DevSPIDERMAN(msg) then 
 database:setex(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," ✦∫ ارسل الان اذاعتك؟ \n ✦∫ للخروج ارسل الغاء ")
 return false
 end 
-if text=="اذاعه ✦" and msg.reply_to_message_id_ == 0 and DevSPIDERMAN(msg) then 
+if text=="اذاعه ✫" and msg.reply_to_message_id_ == 0 and DevSPIDERMAN(msg) then 
 database:setex(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," ✦∫ ارسل الان اذاعتك؟ \n ✦∫ للخروج ارسل الغاء ")
 return false
 end  
-if text=="اذاعه بالتثبيت ✦" and msg.reply_to_message_id_ == 0 and DevSPIDERMAN(msg) then 
+if text=="اذاعه بالتوجيه✫" and msg.reply_to_message_id_ == 0 and DevSPIDERMAN(msg) then 
 database:setex(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," ✦∫ ارسل الان اذاعتك؟ \n ✦∫ للخروج ارسل الغاء ")
 return false
 end 
-if text=="اذاعه بالتوجيه ✦" and msg.reply_to_message_id_ == 0  and DevSPIDERMAN(msg) then 
+if text=="اذاعه بالتوجيه ✫" and msg.reply_to_message_id_ == 0  and DevSPIDERMAN(msg) then 
 database:setex(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," ✦∫ ارسل لي التوجيه الان")
 return false
 end 
-if text=="اذاعه بالتوجيه خاص ✦" and msg.reply_to_message_id_ == 0  and DevSPIDERMAN(msg) then 
+if text=="اذاعه بالتوجيه خاص✫" and msg.reply_to_message_id_ == 0  and DevSPIDERMAN(msg) then 
 database:setex(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," ✦∫ ارسل لي التوجيه الان")
 return false
 end 
-if text == 'جلب نسخه الاحتياطيه ✦' and DevSPIDERMAN(msg) then 
+if text == 'جلب نسخه الاحتياطيه ✫' and DevSPIDERMAN(msg) then 
 GetFile_Bot(msg)
 end
-if text == "تنظيف المشتركين ✦" and DevSPIDERMAN(msg) then 
+if text == "تنظيف المشتركين✫" and DevSPIDERMAN(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -1187,7 +1187,7 @@ end,nil)
 end
 return false
 end
-if text == "تنظيف الكروبات ✦" and DevSPIDERMAN(msg) then 
+if text == "تنظيف الكروبات ✫" and DevSPIDERMAN(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -1361,7 +1361,7 @@ end,nil)
 end
 end
 if database:get(bot_id..'Set:Name:Bot'..msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء ✦' then   
+if text == 'الغاء' or text == 'الغاء ✫' then   
 send(msg.chat_id_, msg.id_," ✦∫ تم الغاء حفظ اسم البوت")
 database:del(bot_id..'Set:Name:Bot'..msg.sender_user_id_) 
 return false  
@@ -1372,7 +1372,7 @@ send(msg.chat_id_, msg.id_, " ✦∫ تم حفظ الاسم")
 return false
 end 
 if database:get(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء ✦' then   
+if text == 'الغاء' or text == 'الغاء ✫' then   
 send(msg.chat_id_, msg.id_," ✦∫ تم الغاء الاذاعه للخاص")
 database:del(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
@@ -1405,7 +1405,7 @@ database:del(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_)
 end
 
 if database:get(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء ✦' then   
+if text == 'الغاء' or text == 'الغاء ✫' then   
 send(msg.chat_id_, msg.id_," ✦∫ تم الغاء الاذاعه")
 database:del(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
@@ -1438,7 +1438,7 @@ database:del(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_i
 end
 
 if database:get(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء ✦' then   
+if text == 'الغاء' or text == 'الغاء ✫' then   
 send(msg.chat_id_, msg.id_," ✦∫ تم الغاء الاذاعه")
 database:del(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  
@@ -1458,7 +1458,7 @@ database:del(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_
 end 
 end
 if database:get(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء ✦' then   
+if text == 'الغاء' or text == 'الغاء ✫' then   
 send(msg.chat_id_, msg.id_," ✦∫ تم الغاء الاذاعه")
 database:del(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  
@@ -2291,27 +2291,27 @@ send(msg.chat_id_, msg.id_,' ✦∫ تم تحديث السورس \n ✦∫ لد�
 dofile('SPIDERMAN.lua')  
 end
 
-if text and text:match("^تغير الاشتراك$") and DevSPIDERMAN(msg) then  
+if text and text:match("^تغير الاشتراك$") and HH6HHH(msg) then  
 database:setex(bot_id.."add:ch:jm" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 360, true)  
 send(msg.chat_id_, msg.id_, ' ✦∫ حسنآ ارسل لي معرف القناة')
 return false  
 end
-if text and text:match("^تغير رساله الاشتراك$") and DevSPIDERMAN(msg) then  
+if text and text:match("^تغير رساله الاشتراك$") and HH6HHH(msg) then  
 database:setex(bot_id.."textch:user" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 360, true)  
 send(msg.chat_id_, msg.id_, ' ✦∫ حسنآ ارسل لي النص الذي تريده')
 return false  
 end
-if text == "حذف رساله الاشتراك ✦" and DevSPIDERMAN(msg) then  
+if text == "حذف رساله الاشتراك ✫ " and HH6HHH(msg) then  
 database:del(bot_id..'text:ch:user')
 send(msg.chat_id_, msg.id_, " ✦∫ تم مسح رساله الاشتراك ")
 return false  
 end
-if text and text:match("^وضع قناة الاشتراك ✦$") and DevSPIDERMAN(msg) then  
+if text and text:match("^وضع قناة الاشتراك ✦$") and HH6HHH(msg) then  
 database:setex(bot_id.."add:ch:jm" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 360, true)  
 send(msg.chat_id_, msg.id_, ' ✦∫ حسنآ ارسل لي معرف القناة')
 return false  
 end
-if text == "تفعيل الاشتراك الاجباري ✦" and DevSPIDERMAN(msg) then  
+if text == "تفعيل الاشتراك الاجباري✫ " and HH6HHH(msg) then  
 if database:get(bot_id..'add:ch:id') then
 local addchusername = database:get(bot_id..'add:ch:username')
 send(msg.chat_id_, msg.id_," ✦∫ الاشتراك الاجباري مفعل \n ✦∫ على القناة » ["..addchusername.."]")
@@ -2321,13 +2321,13 @@ send(msg.chat_id_, msg.id_," ✦∫ اهلا عزيزي المطور \n ✦∫ �
 end
 return false  
 end
-if text == "تعطيل الاشتراك الاجباري ✦" and DevSPIDERMAN(msg) then  
+if text == "تعطيل الاشتراك الاجباري ✫ " and DevSPIDERMAN(msg) then  
 database:del(bot_id..'add:ch:id')
 database:del(bot_id..'add:ch:username')
 send(msg.chat_id_, msg.id_, " ✦∫ تم تعطيل الاشتراك الاجباري ")
 return false  
 end
-if text == "الاشتراك الاجباري ✦" and DevSPIDERMAN(msg) then  
+if text == "الاشتراك الاجباري ✫ " and DevSPIDERMAN(msg) then  
 if database:get(bot_id..'add:ch:username') then
 local addchusername = database:get(bot_id..'add:ch:username')
 send(msg.chat_id_, msg.id_, " ✦∫ تم تفعيل الاشتراك الاجباري \n ✦∫ على القناة » ["..addchusername.."]")
@@ -4495,7 +4495,7 @@ end
 if text == ("رفع مطور ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
 function Function_SPIDERMAN(extra, result, success)
 database:sadd(bot_id.."DEV:Sudo:T", result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","❃∫ تم ترقيته مطور ثانوي في البوت")  
+Reply_Status(msg,result.sender_user_id_,"reply","✦∫ تم ترقيته مطور ثانوي في البوت")  
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_SPIDERMAN, nil)
 return false 
@@ -4505,13 +4505,13 @@ local username = text:match("^رفع مطور ثانوي @(.*)$")
 function Function_SPIDERMAN(extra, result, success)
 if result.id_ then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-send(msg.chat_id_,msg.id_,"❃∫ عذرا عزيزي المستخدم هاذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
+send(msg.chat_id_,msg.id_,"✦∫ عذرا عزيزي المستخدم هاذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
 return false 
 end      
 database:sadd(bot_id.."DEV:Sudo:T", result.id_)
-Reply_Status(msg,result.id_,"reply","❃∫ تم ترقيته مطور ثانوي في البوت")  
+Reply_Status(msg,result.id_,"reply","✦∫ تم ترقيته مطور ثانوي في البوت")  
 else
-send(msg.chat_id_, msg.id_,"❃∫ لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"✦∫ لا يوجد حساب بهاذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_SPIDERMAN, nil)
@@ -4520,13 +4520,13 @@ end
 if text and text:match("^رفع مطور ثانوي (%d+)$") and SudoBot(msg) then
 local userid = text:match("^رفع مطور ثانوي (%d+)$")
 database:sadd(bot_id.."DEV:Sudo:T", userid)
-Reply_Status(msg,userid,"reply","❃∫ تم ترقيته مطور ثانوي في البوت")  
+Reply_Status(msg,userid,"reply","✦∫ تم ترقيته مطور ثانوي في البوت")  
 return false 
 end
 if text == ("تنزيل مطور ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
 function Function_SPIDERMAN(extra, result, success)
 database:srem(bot_id.."DEV:Sudo:T", result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","❃∫ تم تنزيله من المطور ثانويين")  
+Reply_Status(msg,result.sender_user_id_,"reply","✦∫ تم تنزيله من المطور ثانويين")  
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_SPIDERMAN, nil)
 return false 
@@ -4536,9 +4536,9 @@ local username = text:match("^تنزيل مطور ثانوي @(.*)$")
 function Function_SPIDERMAN(extra, result, success)
 if result.id_ then
 database:srem(bot_id.."DEV:Sudo:T", result.id_)
-Reply_Status(msg,result.id_,"reply","❃∫ تم تنزيله من المطور ثانويين")  
+Reply_Status(msg,result.id_,"reply","✦∫ تم تنزيله من المطور ثانويين")  
 else
-send(msg.chat_id_, msg.id_,"❃∫ لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"✦∫ لا يوجد حساب بهاذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_SPIDERMAN, nil)
@@ -4547,12 +4547,12 @@ end
 if text and text:match("^تنزيل مطور ثانوي (%d+)$") and SudoBot(msg) then
 local userid = text:match("^تنزيل مطور ثانوي (%d+)$")
 database:srem(bot_id.."DEV:Sudo:T", userid)
-Reply_Status(msg,userid,"reply","❃∫ تم تنزيله من المطور ثانويين")  
+Reply_Status(msg,userid,"reply","✦∫ تم تنزيله من المطور ثانويين")  
 return false 
 end
 if text == ("الثانويين") and SudoBot(msg) then
 local list = database:smembers(bot_id.."DEV:Sudo:T")
-t = "\n❃∫ قائمة مطورين الثانويين للبوت \n ≪━━━━━━𝗦𝗡━━━━━━≫ \n"
+t = "\n✦∫ قائمة مطورين الثانويين للبوت \n ≪━━━━━━𝗦𝗡━━━━━━≫ \n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -4562,13 +4562,13 @@ t = t..""..k.."- (`"..v.."`)\n"
 end
 end
 if #list == 0 then
-t = "❃∫ لا يوجد مطورين ثانويين"
+t = "✦∫ لا يوجد مطورين ثانويين"
 end
 send(msg.chat_id_, msg.id_, t)
 end
 if text == ("مسح الثانويين") and SudoBot(msg) then
 database:del(bot_id.."DEV:Sudo:T")
-send(msg.chat_id_, msg.id_, "\n❃∫ تم مسح قائمة المطورين الثانويين  ")
+send(msg.chat_id_, msg.id_, "\n✦∫ تم مسح قائمة المطورين الثانويين  ")
 end
 if text == 'مسح الادمنيه' and Manager(msg) then
 database:del(bot_id..'Mod:User'..msg.chat_id_)
@@ -9107,7 +9107,7 @@ if text == 'الاحصائيات' then
 if DevSPIDERMAN(msg) then 
 local Groups = database:scard(bot_id..'Chek:Groups')  
 local Users = database:scard(bot_id..'User_Bot')  
-Text = ' الاحصائيات ✦ \n'..' ✦∫ عدد الكروبات » {'..Groups..'}'..'\n ✦∫  عدد المشتركين » {'..Users..'}'
+Text = ' الاحصائيات✫ \n'..' ✦∫ عدد الكروبات » {'..Groups..'}'..'\n ✦∫  عدد المشتركين » {'..Users..'}'
 send(msg.chat_id_, msg.id_,Text) 
 end
 return false
@@ -9874,12 +9874,12 @@ send(msg.chat_id_, msg.id_,'✫: ارسل ايدي المطور الاساسي �
 database:set(bot_id..'DEV:Sudo:T',true) 
 end
 if text =='تغيير المطور الاساسي' and not SudoBot(msg) then
-send(msg.chat_id_, msg.id_,'✫: تسرسح')
+send(msg.chat_id_, msg.id_,'الامر لا يخصك')
 end
 if database:get(bot_id.."DEV:Sudo:T") then
 if text and text:match("^(%d+)$") then
 local IdDe = text:match("^(%d+)$")
-send(msg.chat_id_,msg.id_, "✫: تم تحفظ المعلومات اضغط ( تحديث الملفات ✫ ) للتنفيذ")
+send(msg.chat_id_,msg.id_, "تم حفض الايدي ارسل كلمه تحديث لتغير المطور ")
 local A = io.open("./Info.lua", 'w')
 A:write([[
 do local Info = {
